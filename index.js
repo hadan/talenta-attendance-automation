@@ -96,7 +96,7 @@ const main = async () => {
     .innerText();
 
   const isOffToday = whoIsOffToday.includes(myName);
-
+  console.log("isf off? " + isOffToday)
   if (isOffToday) {
     console.log("You are off today, skipping check in/out...");
     await browser.close();
@@ -105,7 +105,8 @@ const main = async () => {
 
   // go to "My Attendance Logs"
   await page.click("text=My Attendance Logs");
-  await page.waitForSelector(`h3:text("${myName}")`);
+  // await page.waitForSelector(`h3:text("${myName}")`);
+  await page.waitForSelector(`h3:text("Present")`);
   console.log(
     "Already inside My Attendance Logs to check holiday or day-off..."
   );
