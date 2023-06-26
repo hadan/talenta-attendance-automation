@@ -30,7 +30,9 @@ const PUBLIC_HOLIDAYS = [
   "18 Mei 2023", // kenaikan isa almasih
   "1 Jun 2023", // hari lahir pancasila
   "2 Jun 2023", // cuti bersama waisak
+  "28 Jun 2023", // cuti bersama
   "29 Jun 2023", // idul adha
+  "30 Jun 2023", // cuti bersama
   "19 Jul 2023", // tahun baru islam
   "17 Aug 2023", // kemerdekaan indonesia
   "28 Sep 2023", // maulid nabi muhammad
