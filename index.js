@@ -38,6 +38,29 @@ const PUBLIC_HOLIDAYS = [
   "28 Sep 2023", // maulid nabi muhammad
   "25 Dec 2023", // natal
   "26 Dec 2023", // cuti bersama natal
+  "1 Jan 2024",  // Tahun Baru 2024 Masehi
+  "8 Feb 2024",  // Isra Mi’raj Nabi Muhammad SAW
+  "9 Feb 2024",  // cuti bersama Imlek
+  "10 Feb 2024", // Tahun Baru Imlek 2575 Kongzili
+  "11 Mar 2024", // Hari Suci Nyepi Tahun Baru Saka 1946
+  "29 Mar 2024", // Wafat Isa Almasih
+  "31 Mar 2024", // Hari Paskah
+  "10 Apr 2024", // Hari Raya Idul Fitri 1445 Hijriah
+  "11 Apr 2024", // Hari Raya Idul Fitri 1445 Hijriah
+  "12 Apr 2024", // Cuti Hari Raya Idul Fitri 1445 Hijriah
+  "13 Apr 2024", // Cuti Hari Raya Idul Fitri 1445 Hijriah
+  "14 Apr 2024", // Cuti Hari Raya Idul Fitri 1445 Hijriah
+  "1 May 2024",  // Hari Buruh Internasional
+  "9 May 2024",  //Kenaikan Isa Almasih
+  "23 Mei 2024", // Hari Raya Waisak 2568
+  "1 Jun 2024",  // Hari Lahir Pancasila
+  "17 Jun 2024", // Hari Raya Idul Adha 1445 Hijriah
+  "7 Jul 2024",  // Tahun Baru Islam 1446 Hijriah
+  "17 Aug 2024", // Hari Kemerdekaan RI
+  "16 Sep 2024", // Maulid Nabi Muhammad SAW
+  "25 Dec 2024", // Hari Raya Natal
+  "26 Dec 2024", // Cuti Bersama Hari Raya Natal
+
 ];
 
 const main = async () => {
