@@ -66,6 +66,7 @@ const main = async () => {
 
   const page = await context.newPage();
 
+  console.log("check type: " + process.env.CHECK_TYPE );
   console.log("Opening login page...");
   await page.goto(
     "https://account.mekari.com/users/sign_in?client_id=TAL-73645&return_to=L2F1dGg_Y2xpZW50X2lkPVRBTC03MzY0NSZyZXNwb25zZV90eXBlPWNvZGUmc2NvcGU9c3NvOnByb2ZpbGU%3D"
@@ -81,10 +82,8 @@ const main = async () => {
   await page.fill("#user_password", process.env.ACCOUNT_PASSWORD);
 
   console.log("Signing in...");
-  await Promise.all([
-    page.click("#new-signin-button"),
-    page.waitForNavigation(),
-  ]);
+  await page.click("#new-signin-button");
+  await page.waitForURL('**/dashboard');
 
   const dashboardNav = page.getByText("Dashboard");
   // check if dashboard nav is exist
@@ -97,8 +96,9 @@ const main = async () => {
     .locator(".tl-card-small", { hasText: `Who's Off` })
     .innerText();
 
+  
   const isOffToday = whoIsOffToday.includes(myName);
-  console.log("isf off? " + isOffToday)
+  console.log("is off today? " + isOffToday)
   if (isOffToday) {
     console.log("You are off today, skipping check in/out...");
     await browser.close();
@@ -107,8 +107,9 @@ const main = async () => {
 
   // go to "My Attendance Logs"
   await page.click("text=My Attendance Logs");
-  // await page.waitForSelector(`h3:text("${myName}")`);
-  await page.waitForSelector(`h3:text("Present")`);
+  // await page.waitForSelector(`h3:text("Present")`);
+  const h3Present = page.locator(`h3:text("Present")`);
+  await h3Present.first().waitFor();
   console.log(
     "Already inside My Attendance Logs to check holiday or day-off..."
   );
